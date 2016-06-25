@@ -3,12 +3,12 @@
 
 ## [Scripts](./scripts/README.md)
 - [setup-new-user.sh](./scripts/README.md#setup-new-user) - sets up permissions for a new ssh user and a new webapp.
-- [setup-ssh.sh](#setup-ssh) - sets up the ./ssh directory for a specified new ssh user.
-- [grant-user-permission-for-webapp.sh](#grant-user-permission-for-webapp) - ensures the specified user has read and write permissions for the specified webapp.
-- [clean-webapp-permissions](#clean-webapp-permissions) - removes access to the specified webapp for all users except for your main user.
+- [setup-ssh.sh](./scripts/README.md#setup-ssh) - sets up the ./ssh directory for a specified new ssh user.
+- [grant-user-permission-for-webapp.sh](./scripts/README.md#grant-user-permission-for-webapp) - ensures the specified user has read and write permissions for the specified webapp.
+- [clean-webapp-permissions](./scripts/README.md#clean-webapp-permissions) - removes access to the specified webapp for all users except for your main user.
 
 ### Motivation
-When I create a new [*Application*][applications] on [Webfaction][webfaction] I also create an [SSH user][additional users] to manage it. I do this specifically to allow my apps to interact with various kinds of automation such as [CD/CD](https://circleci.com/) while remaining secure and isolated from my other apps. Unfortunately this can be confusing to setup on [Webfaction][webfaction]. Using the control panel to grant permission to an ssh user for one app in the `/webapps` directory results in that user having read permissions on every other subdirectory. Following the instructions outlined [here][permissions] you can achieve the desired security but it is rather tedious. I have written these scripts to make create a new application and ssh user for it quick an easy.
+When I create a new [*Application*][applications] on [Webfaction][webfaction] I also create an [SSH user][additional users] to manage it. I do this specifically to allow my apps to interact with various kinds of automation such as [CD/CD](https://circleci.com/) while remaining secure and isolated from my other apps. Unfortunately this can be confusing to setup on [Webfaction][webfaction]. Using the control panel to grant permission to an ssh user for one app in the `/webapps` directory results in that user having read permissions on every other subdirectory. Following the instructions outlined [here][permissions] you can achieve the desired security but it is rather tedious. I have written these scripts to make crating a new application and an ssh user for it quick and easy.
 
 ### Caveats
 - This is my first substantial dive into shell scripting.
